@@ -39,14 +39,14 @@ public class MemberVerifierTest {
         Member m = new Member("Maruf", "Adress", "mail", "1234", "2020-01-01", "2022-01-01", "Platina");
 
         String result = verifier.checkMemberStatus(m, LocalDate.of(2025, 10, 22));
-        assertTrue(result.contains("fore detta medlem"));
+        assertTrue(result.contains("fore detta medlem")); //assert kollar om påstående är sant, automatiskt, samma resultat, inte kräver inmatning.
     }
 
     @Test
     public void testCheckMemberStatusUnknown() {
         MemberVerifier verifier = new MemberVerifier(); // Instans av verifieringsklassen
         String result = verifier.checkMemberStatus(null, LocalDate.of(2025, 10, 22));
-        assertTrue(result.contains("inte i registret"));
+        assertTrue(result.contains("inte i registret")); //
     }
 }
 

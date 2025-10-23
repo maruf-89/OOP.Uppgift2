@@ -23,7 +23,7 @@ public class GymVisitWriterTest {
         Files.deleteIfExists(Path.of(testFile));
 
         GymVisitWriter writer = new GymVisitWriter();
-        GymVisit visit = new GymVisit("Test Testsson", "1234", LocalDate.of(2025, 10, 22));
+        GymVisit visit = new GymVisit("Test Testsson", "12345", LocalDate.of(2025, 10, 22));
         writer.writeVisitToFile(testFile, visit);
 
         File f = new File(testFile);
